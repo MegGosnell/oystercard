@@ -1,2 +1,11 @@
 class Oystercard
-end 
+  def initialize
+    @balance = 0
+  end
+
+  def top_up(amount)
+    @balance = @balance + amount
+  end
+
+  attr_reader :balance
+end
