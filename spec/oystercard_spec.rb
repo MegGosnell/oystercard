@@ -10,7 +10,6 @@ describe Oystercard do
     subject.top_up(amount)
     expect(subject.balance).to eq (prior_balance + amount)
   end
-
   it 'raises an error if the maximum balance is exeeded' do
     subject.top_up(subject.max)
     expect { subject.top_up (1) }.to raise_error "maximum balance reached #{subject.max}"
